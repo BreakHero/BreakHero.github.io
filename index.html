@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>any list scroller demo - jQuery scrolling plugin by musings.it to scroll any kind of list with any content - musings.it web design and development</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/CSSreset.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/als_demo.css" />
+		<link rel="icon"          href="images/favicon.ico" type="image/x-icon" />
+    	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<meta name="robots" content="index,follow" />
+		<meta name="keywords" content="jQuery plugin, jQuery scroller, list jQuery, jQuery lists, css3, html5, jQuery" />
+    	<meta name="description" content="any list scroller demo - jQuery scrolling plugin by musings.it to scroll any kind of list with any content - musings.it web design and development - Bergamo Italy" /> 	
+		<meta name="author" content="Federica Sibella - musings.it" />
+		<meta name="geo.placename" content="via Generale Alberico Albricci 1, 24128 Bergamo, Italy">
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.als-1.7.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() 
+			{
+				$("#lista1").als({
+					visible_items: 3,
+					scrolling_items: 1,
+					orientation: "horizontal",
+					circular: "yes",
+					interval: 5000,
+					autoscroll: "yes",
+					speed: 200,
+					easing: "linear",
+					direction: "right",
+					start_from: 0
+				});
+				
+				//logo hover
+				$("#logo_img").hover(function()
+				{
+					$(this).attr("src","images/als_logo_hover212x110.png");
+				},function()
+				{
+					$(this).attr("src","images/als_logo212x110.png");
+				});
+				
+				//logo click
+				$("#logo_img").click(function()
+				{
+					location.href = "http://als.musings.it/index.php";
+				});
+				
+				$("a[href^='http://']").attr("target","_blank");
+				$("a[href^='http://als']").attr("target","_self");
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+
+		</header>	
+		<section id="content">
+		
+			<div id="lista1" class="als-container">
+				<span class="als-prev"><img src="images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+				<div class="als-viewport">
+					<ul class="als-wrapper">
+						<li class="als-item"><a href="http://hardsubcafe.blogspot.com/search/label/Adventure%20Time"><img src="images/als-images/Finn.png" alt="Finn" title="Adventure%20Time" />AdventureTime</a></li>
+						<li class="als-item"><img src="images/als-images/Steven.png" alt="Steven" title="StevenUniverse" />StevenUniverse</li>
+						<li class="als-item"><img src="images/als-images/Bee.png" alt="Bee" title="card" />BeeandPuppyCat</li>
+						<li class="als-item"><img src="images/als-images/Rigby.png" alt="Rigby" title="Rigby" />RegularShow</li>
+						<li class="als-item"><img src="images/als-images/overthegarden2.png" alt="overthegarden" title="overthegarden" />Over the Garden</li>
+					</ul>
+				</div>
+				<span class="als-next"><img src="images/thin_right_arrow_333.png" alt="next" title="next" /></span>
+			</div>
+
+		</section>
+		
+	</body>
+</html>
